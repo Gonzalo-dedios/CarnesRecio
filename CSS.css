@@ -1,0 +1,91 @@
+/* Tipografía y fondo base */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Barra de navegación */
+  .navbar {
+    margin-bottom: 50px;
+  }
+  
+  .navbar-brand i {
+    margin-right: 10px;
+  }
+  
+  /* --- Header principal --- */
+  header {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 60px 0;
+  }
+  
+  header h1 {
+    font-size: 3rem; /* lo dejé grande para impacto */
+  }
+  
+  header p {
+    font-size: 1.2rem;
+  }
+  
+  /* Tarjetas de productos */
+  #productos .card {
+    transition: transform 0.3s ease;
+  }
+  
+  #productos .card:hover {
+    transform: scale(1.05); /* animación al pasar el mouse */
+  }
+  
+  #productos .card img {
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  /* También aplica para salsas */
+  .card-img-top {
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 2px solid #dc3545; /* línea decorativa */
+  }
+  
+  /* Carrito de compras */
+  #carrito ul {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  #carrito .btn-danger {
+    width: 200px;
+    margin-top: 20px;
+  }
+  
+  /* Formulario de contacto */
+  #contacto .form-label {
+    font-weight: bold;
+  }
+  
+  #contacto .btn-primary {
+    background-color: #dc3545; /* mismo rojo del header */
+    border: none;
+    width: 200px;
+    margin-top: 20px;
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    margin-top: 50px;
+  }
+  
+  /* Animaciones (usadas con AOS) */
+  [data-aos="fade-up"] {
+    transition: opacity 1s ease-out;
+  }
+  
+  /* Pude agregar algo de responsive más adelante... */
+  

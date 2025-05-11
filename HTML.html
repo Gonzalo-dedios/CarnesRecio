@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carnes Recio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="CSS.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+</head>
+<body>
+  <nav class="barra-navegacion navbar navbar-expand-lg navbar-dark bg-danger">
+    <div class="contenedor-nav container">
+      <a class="logo navbar-brand" href="#"><i class="bi bi-fire"></i> Carnes Recio</a>
+      <button class="btn-menu navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="menu-links collapse navbar-collapse" id="menu">
+        <ul class="nav-lista navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#productos"><i class="bi bi-shop"></i> Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="#carrito"><i class="bi bi-cart"></i> Carrito</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto"><i class="bi bi-envelope"></i> Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="seccion-bienvenida text-center py-5" data-aos="fade-down">
+    <h1 class="titulo-principal fw-bold">Bienvenido a Carnes Recio</h1>
+    <p class="subtitulo lead">Los mejores cortes de carne directo a tu mesa</p>
+  </header>
+
+  <main class="contenedor-productos container" id="productos">
+    <h2 class="titulo-seccion text-center mb-4" data-aos="zoom-in">Catálogo</h2>
+    <div class="lista-productos row" id="lista-carnes">
+      <!-- Productos -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="img/entrecot.jpg" class="card-img-top" alt="Entrecot de res">
+          <div class="card-body">
+            <h5 class="card-title">Entrecot de res</h5>
+            <p class="card-text">Corte jugoso ideal para la parrilla.</p>
+            <p class="card-text fw-bold">$250</p>
+            <button class="btn btn-success" onclick="agregarAlCarrito('Entrecot de res', 250)">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="img/costillas.jpg" class="card-img-top" alt="Costillas BBQ">
+          <div class="card-body">
+            <h5 class="card-title">Costillas BBQ</h5>
+            <p class="card-text">Costillas sazonadas listas para asar.</p>
+            <p class="card-text fw-bold">$180</p>
+            <button class="btn btn-success" onclick="agregarAlCarrito('Costillas BBQ', 180)">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="img/filete.jpg" class="card-img-top" alt="Filete de res premium">
+          <div class="card-body">
+            <h5 class="card-title">Filete de res premium</h5>
+            <p class="card-text">Filete tierno y de alta calidad.</p>
+            <p class="card-text fw-bold">$320</p>
+            <button class="btn btn-success" onclick="agregarAlCarrito('Filete de res premium', 320)">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="img/milanesa.jpg" class="card-img-top" alt="Milanesa de res empanizada">
+          <div class="card-body">
+            <h5 class="card-title">Milanesa de res</h5>
+            <p class="card-text">Delgadas y listas para freír.</p>
+            <p class="card-text fw-bold">$150</p>
+            <button class="btn btn-success" onclick="agregarAlCarrito('Milanesa de res', 150)">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="img/arrachera.jpg" class="card-img-top" alt="Arrachera marinada">
+          <div class="card-body">
+            <h5 class="card-title">Arrachera marinada</h5>
+            <p class="card-text">Suave y llena de sabor, lista para asar.</p>
+            <p class="card-text fw-bold">$290</p>
+            <button class="btn btn-success" onclick="agregarAlCarrito('Arrachera marinada', 290)">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="img/chorizo.jpg" class="card-img-top" alt="Chorizo artesanal">
+          <div class="card-body">
+            <h5 class="card-title">Chorizo artesanal</h5>
+            <p class="card-text">Ideal para tacos o a la parrilla.</p>
+            <p class="card-text fw-bold">$90</p>
+            <button class="btn btn-success" onclick="agregarAlCarrito('Chorizo artesanal', 90)">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="img/jamon.jpg" class="card-img-top" alt="Jamón ibérico">
+          <div class="card-body">
+            <h5 class="card-title">Jamón ibérico</h5>
+            <p class="card-text">Curado de forma tradicional, sabor intenso y delicado.</p>
+            <p class="card-text fw-bold">$450</p>
+            <button class="btn btn-success" onclick="agregarAlCarrito('Jamón ibérico', 450)">Agregar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="titulo-seccion text-center mb-4" data-aos="zoom-in">Salsas para acompañar</h2>
+    <div class="lista-productos row" id="lista-salsas">
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="img/salsa_bbq.jpg" class="card-img-top" alt="Salsa BBQ">
+          <div class="card-body">
+            <h5 class="card-title">Salsa BBQ</h5>
+            <p class="card-text">Perfecta para costillas y hamburguesas.</p>
+            <p class="card-text fw-bold">$60</p>
+            <button class="btn btn-success" onclick="agregarAlCarrito('Salsa BBQ', 60)">Agregar</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="img/salsa_verde.jpg" class="card-img-top" alt="Salsa verde">
+          <div class="card-body">
+            <h5 class="card-title">Salsa verde</h5>
+            <p class="card-text">Picante suave, ideal para tacos y carnes.</p>
+            <p class="card-text fw-bold">$45</p>
+            <button class="btn btn-success" onclick="agregarAlCarrito('Salsa verde', 45)">Agregar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <section class="seccion-carrito container my-5" id="carrito">
+    <h2 class="titulo-carrito text-center" data-aos="fade-up">Tu Carrito</h2>
+    <ul class="lista-carrito list-group" id="items-carrito"></ul>
+    <div class="total-carrito text-end mt-3">
+      <h5 id="precio-total">Total: $0</h5>
+      <button class="boton-vaciar btn btn-danger" onclick="vaciarTodo()">
+        <i class="bi bi-trash"></i> Vaciar
+      </button>
+    </div>
+  </section>
+
+  <section class="seccion-contacto container mb-5" id="contacto">
+    <h2 class="titulo-contacto text-center mb-4" data-aos="fade-up">Contáctanos</h2>
+    <form class="formulario-contacto row g-3" id="form-contacto">
+      <div class="campo-nombre col-md-6">
+        <label for="input-nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="input-nombre" required>
+      </div>
+      <div class="campo-email col-md-6">
+        <label for="input-email" class="form-label">Correo</label>
+        <input type="email" class="form-control" id="input-email" required>
+      </div>
+      <div class="campo-mensaje col-12">
+        <label for="input-mensaje" class="form-label">Mensaje</label>
+        <textarea class="form-control" id="input-mensaje" rows="3" required></textarea>
+      </div>
+      <div class="boton-enviar col-12 text-center">
+        <button type="submit" class="btn btn-primary"><i class="bi bi-send"></i> Enviar</button>
+      </div>
+    </form>
+  </section>
+
+  <footer class="pie-pagina bg-dark text-white text-center p-3">
+    &copy; 2025 Carnes Recio. Todos los derechos reservados.
+  </footer>
+
+  <script src="JS.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+</html>
